@@ -4,3 +4,25 @@
     margin-left: 10px;
     margin-bottom: 5px;
 }
+
+.container{
+    margin-top: 25px;
+}
+
+.gif-container{
+  width: 275px;
+  height: 300px;
+}
+
+img{
+    border: 2px black solid;
+    width: 250px;
+    height: 200px;
+    
+}
+
+.poster img{
+    border: 2px black solid;
+    /* width: 90%; */
+    height: 70%;
+}

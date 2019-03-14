@@ -1,0 +1,1 @@
+var favoriteGifs = localStorage.getItem("gifs");
