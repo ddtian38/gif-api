@@ -1,10 +1,11 @@
 
-var queryURLArr = ["http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20V&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20VI&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20I&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20II&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20III&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20VII&plot=short", "http://www.omdbapi.com/?apikey=trilogy&t=Star%20Wars%20Episode%20VIII&plot=short"]
+var queryURLArr = ["Star Wars", "Star Wars Episode V", "Star Wars% Episode VI", "Star Wars Episode I", "Star Wars Episode II", "Star Wars Episode III", "Star Wars Episode VII", "Star Wars Episode VIII"]
+
 var i = 0;
 
 for(var x = 0; x < queryURLArr.length; x++){
 
-    var queryURL = queryURLArr[x];
+    var queryURL = "https://www.omdbapi.com/?apikey=trilogy&t="+queryArr[x]+"&plot=short";
     console.log(queryURL);
 
     $.ajax({
