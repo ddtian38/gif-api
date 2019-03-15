@@ -3,7 +3,7 @@ var queryArr = ["Star Wars", "Star Wars Episode V", "Star Wars% Episode VI", "St
 
 var i = 0;
 
-for(var x = 0; x < queryURLArr.length; x++){
+for(var x = 0; x < queryArr.length; x++){
 
     var queryURL = "https://www.omdbapi.com/?apikey=trilogy&t="+queryArr[x]+"&plot=short";
     console.log(queryURL);
