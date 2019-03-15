@@ -14,11 +14,17 @@
   height: 300px;
 }
 
-img{
+.gif-container img{
     border: 2px black solid;
     width: 250px;
     height: 200px;
     
+}
+
+#favorite-gifs img{
+    margin-left: 10px;
+    width: 250px;
+    height: 200px;
 }
 
 .poster img{

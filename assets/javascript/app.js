@@ -3,13 +3,37 @@ var topics = ["Darth Vader", "Anakin Skywalker", "Clones Troopers", "Ahsoka Tano
 var buttonHolder = document.querySelector("#button-holder");
 
 localStorage.clear();
+var favorites = [];
+ var index = 1;
+// if(document.cookie === ""){
+//     var favorites = [];
+// }
+// else{
+//     var favorites = ;
+// }
 
-if(localStorage.getItem("gifs") === null){
-    var favorites = [];
+
+function createCookie(name,value,days) {
+	if (days) {
+		var date = new Date();
+		date.setTime(date.getTime()+(days*24*60*60*1000));
+		var expires = "; expires="+date.toGMTString();
+	}
+	else var expires = "";
+	document.cookie = name+"="+value+expires+"; path=/";
 }
-else{
-    var favorites = JSON.parse(localStorage.getItem("gifs"));
+
+function readCookie(name) {
+	var nameEQ = name + "=";
+	var ca = document.cookie.split(';');
+	for(var i=0;i < ca.length;i++) {
+		var c = ca[i];
+		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+	}
+	return null;
 }
+
 
 
 function renderTopicButtons(topicsArr){
@@ -63,6 +87,7 @@ function renderTopicButtons(topicsArr){
                     imageGif.setAttribute("data-state","still");
                     imageGif.setAttribute("data-animate", gifArr[i].images["original"].url)
                     imageGif.setAttribute("data-still", gifArr[i].images["original_still"].url)
+                    imageGif.setAttribute("data-title", title.toUpperCase().slice(0, title.indexOf("GIF")))
                     imageGif.setAttribute("src", gifArr[i].images["original_still"].url);
                     imageGif.setAttribute("alt", "gif"+(i+1));
                     gif.append(imageGif);
@@ -95,6 +120,19 @@ function renderTopicButtons(topicsArr){
     }
 }
 
+function main(){
+    renderTopicButtons(topics);
+
+        document.getElementById("submit").addEventListener("click",function(event){
+            event.preventDefault();
+            var gifText = document.getElementById("gif-search").search.value;
+            topics.push(gifText);
+            renderTopicButtons(topics);
+    
+        })
+}
+
+
 $(document).on("click", ".gif-container img", function(){
     console.log($(this).attr("data-animate"));
     var state = $(this).attr("data-state")
@@ -109,24 +147,15 @@ $(document).on("click", ".gif-container img", function(){
 })
 
 
-function main(){
-    renderTopicButtons(topics);
 
-        document.getElementById("submit").addEventListener("click",function(event){
-            event.preventDefault();
-            var gifText = document.getElementById("gif-search").search.value;
-            topics.push(gifText);
-            renderTopicButtons(topics);
-    
-        })
-}
 
 $(document).on("click", "#favorite-button", function(){
     x = $(this);
     console.log($(this));
     var favGif = $(this)[0].previousSibling;
     favorites.push(favGif.outerHTML);
-    localStorage.setItem("gifs", JSON.stringify(favorites))
+    createCookie("gif"+index, favGif.outerHTML, 20);
+    index++;
 })
 
 
