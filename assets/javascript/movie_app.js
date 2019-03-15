@@ -1,5 +1,5 @@
 
-var queryURLArr = ["Star Wars", "Star Wars Episode V", "Star Wars% Episode VI", "Star Wars Episode I", "Star Wars Episode II", "Star Wars Episode III", "Star Wars Episode VII", "Star Wars Episode VIII"]
+var queryArr = ["Star Wars", "Star Wars Episode V", "Star Wars% Episode VI", "Star Wars Episode I", "Star Wars Episode II", "Star Wars Episode III", "Star Wars Episode VII", "Star Wars Episode VIII"]
 
 var i = 0;
 
