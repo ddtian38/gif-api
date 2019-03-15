@@ -1,5 +1,7 @@
+//cookieIndex to keep track of cookie ID after user selects favorites
 var cookieIndex = 1;
 
+//Function will read the cookies
 function readCookie(name) {
 	var nameEQ = name + "=";
 	var ca = document.cookie.split(';');
@@ -19,6 +21,7 @@ while(readCookie("gif"+cookieIndex) !== null ){
     cookieIndex++;
 }
 
+//Document listens for event listener for any GIF that is clicked. GIF will switch between still and animated.
 $(document).on("click", "img", function(){
     console.log($(this).attr("data-animate"));
     var state = $(this).attr("data-state")

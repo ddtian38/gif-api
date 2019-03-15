@@ -5,15 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>GIF API</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/reset.css">
         <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="index.html">Star Wars Apps</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
@@ -21,79 +21,69 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                   <div class="navbar-nav">
                     <a class="nav-item nav-link active" href="index.html">GIF Search</a>
-                    <a class="nav-item nav-link" href="movie_index.html">Movies</a>
+                    <a class="nav-item nav-link active" href="movie_index.html">Movies</a>
                     <a class="nav-item nav-link active" href="favorites.html">Favorite Gifs</a>
                   </div>
                 </div>
               </nav>
     <div class="container-fluid">
             <table class="table-response">
-                    <caption>List of Star Wars Movie</caption>
                     <thead>
                       <tr class="d-flex">
                         <th scope="col" class="col-2">Title</th>
                         <th scope="col" class="col-1">Rating</th>
-                        <th scope="col" class = "col-2">Plot</th>
-                        <th scope="col" class = "col-5">Poster</th>
-                        <th scope="col" class = "col-2">Rated</th>
+                        <th scope="col" class = "col-5">Plot</th>
+                        <th scope="col" class = "col-3">Poster</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr id="movie-1" class="d-flex">
                         <td scope="row" class= "title col-2"></td>
                         <td class = "rating col-1"></td>
-                        <td class = "plot col-2"></td>
-                        <td class = "poster col-5"></td>
-                        <td class = "rated col-2"></td>
+                        <td class = "plot col-5"></td>
+                        <td class = "poster col-3"></td>
                       </tr>
                       <tr id="movie-2" class="d-flex">
                         <td scope="row" class= "title col-2"></td>
                         <td class = "rating col-1"></td>
-                        <td class = "plot col-2"></td>
-                        <td class = "poster col-5"></td>
-                        <td class = "rated col-2"></td>
+                        <td class = "plot col-5"></td>
+                        <td class = "poster col-3"></td>
                       </tr>
                       <tr id="movie-3" class="d-flex">
                         <td scope="row" class= "title col-2"></td>
                         <td class = "rating col-1"></td>
-                        <td class = "plot col-2"></td>
-                        <td class = "poster col-5"></td>
-                        <td class = "rated col-2"></td>
+                        <td class = "plot col-5"></td>
+                        <td class = "poster col-3"></td>
                       </tr>
                       <tr id="movie-4" class="d-flex">
                           <td scope="row" class= "title col-2"></td>
                           <td class = "rating col-1"></td>
-                          <td class = "plot col-2"></td>
-                          <td class = "poster col-5"></td>
-                          <td class = "rated col-2"></td>
+                          <td class = "plot col-5"></td>
+                          <td class = "poster col-3"></td>
                       </tr>
                       <tr id="movie-5" class="d-flex"> 
                         <td scope="row" class= "title col-2"></td>
                         <td class = "rating col-1"></td>
-                        <td class = "plot col-2"></td>
-                        <td class = "poster col-5"></td>
-                        <td class = "rated col-2"></td>
+                        <td class = "plot col-5"></td>
+                        <td class = "poster col-3"></td>
                     </tr>
                     <tr id="movie-6" class="d-flex">
                       <td scope="row" class= "title col-2"></td>
                       <td class = "rating col-1"></td>
-                      <td class = "plot col-2"></td>
-                      <td class = "poster col-5"></td>
-                      <td class = "rated col-2"></td>
+                      <td class = "plot col-5"></td>
+                      <td class = "poster col-3"></td>
                   </tr>
                   <tr id="movie-7" class="d-flex">
                     <td scope="row" class= "title col-2"></td>
                     <td class = "rating col-1"></td>
-                    <td class = "plot col-2"></td>
-                    <td class = "poster col-5"></td>
-                    <td class = "rated  col-2"></td>
+                    <td class = "plot col-5"></td>
+                    <td class = "poster col-3"></td>
                 </tr>
                 <tr id="movie-8" class="d-flex">
                   <td scope="row" class= "title col-2"></td>
                   <td class = "rating col-1"></td>
-                  <td class = "plot col-2"></td>
-                  <td class = "poster col-5"></td>
-                  <td class = "rated col-2"></td>
+                  <td class = "plot col-5"></td>
+                  <td class = "poster col-3"></td>
               </tr>
                     </tbody>
                   </table>

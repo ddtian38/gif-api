@@ -1,8 +1,9 @@
-.btn{
-    background-color: black;
-    color: yellow;
-    margin-left: 10px;
-    margin-bottom: 5px;
+body{
+    color:  black;
+    background-color: #C0C0C0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .container{
@@ -18,7 +19,13 @@
     border: 2px black solid;
     width: 250px;
     height: 200px;
-    
+}
+
+.btn, #favorite-button, #download-button{
+    background-color: black;
+    color: yellow;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 
 #favorite-gifs img{
@@ -27,8 +34,27 @@
     height: 200px;
 }
 
+table{
+    margin-top: 10px;
+}
+
+tr{
+    border-bottom: 2px black solid;
+    
+}
+
+td{
+    border-left: 2px black solid;
+    text-align: left;
+}
+
+.rating{
+    margin-right: 10px;
+}
+
 .poster img{
+    margin-top: 10px;
     border: 2px black solid;
-    /* width: 90%; */
-    height: 70%;
+    height: 50%;
+    
 }
