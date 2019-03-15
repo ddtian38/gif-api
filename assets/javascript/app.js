@@ -141,7 +141,6 @@ $(document).on("click", ".gif-container img", function(){
 $(document).on("click", "#favorite-button", function(){
 
     var favGif = $(this)[0].parentNode.cloneNode(true)
-    favGif.removeChild(favGif.childNodes[4]);
     favGif.removeChild(favGif.childNodes[3]);
     createCookie("gif"+cookieIndex, favGif.outerHTML, 20);
     cookieIndex++;
