@@ -4,7 +4,7 @@ var buttonHolder = document.querySelector("#button-holder");
 
 localStorage.clear();
 var favorites = [];
- var index = 1;
+ var cookieIndex = 1;
 // if(document.cookie === ""){
 //     var favorites = [];
 // }
@@ -152,10 +152,14 @@ $(document).on("click", ".gif-container img", function(){
 $(document).on("click", "#favorite-button", function(){
     x = $(this);
     console.log($(this));
-    var favGif = $(this)[0].previousSibling;
+    var favGif = $(this)[0].parentNode.cloneNode(true)
+    favGif.removeChild(favGif.childNodes[4]);
+    favGif.removeChild(favGif.childNodes[3]);
+
+    console.log(favGif)
     favorites.push(favGif.outerHTML);
-    createCookie("gif"+index, favGif.outerHTML, 20);
-    index++;
+    createCookie("gif"+cookieIndex, favGif.outerHTML, 20);
+    cookieIndex++;
 })
 
 

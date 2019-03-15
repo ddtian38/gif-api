@@ -1,4 +1,4 @@
-var index = 1;
+var cookieIndex = 1;
 
 function readCookie(name) {
 	var nameEQ = name + "=";
@@ -11,15 +11,12 @@ function readCookie(name) {
 	return null;
 }
 
-while(readCookie("gif"+index) !== null ){
-    var fav = readCookie("gif"+index)
+while(readCookie("gif"+cookieIndex) !== null ){
+    var fav = readCookie("gif"+cookieIndex)
     console.log(fav)
     // fav.replace("\"", "'");
-    $("<div").append($("<p>").text())
-    $(".container").append(fav);
-    
-    console.log(index)
-    index++;
+    $(".container .row .col-md-12").append(fav);
+    cookieIndex++;
 }
 
 $(document).on("click", "img", function(){
