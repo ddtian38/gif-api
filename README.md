@@ -1,4 +1,4 @@
-# gif-api
+# Star Wars GIF Application
 
 This web app allows user to download and add their favorite GIFs from Star Wars. Alongside it also gives users information about 
 eight Star Wars movie that are created. The app uses GPI API to retrieve the topics that are on the buttons. One of the main challenges
